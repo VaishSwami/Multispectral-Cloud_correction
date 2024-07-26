@@ -5,4 +5,4 @@ Cite data, methods, and code as: Swaminathan, Vaishali, et al. "Radiometric Cali
 
 Read comments in main.py to edit file path and modify input parameters
 
-An example dataset with Micasense RedEdge3 multispectral images affected by variable cloud cover is provided in the Example Dataset folder
+You may request for sample data and examples using the link: https://drive.google.com/drive/folders/1wk_DCkDjKK9nbuSB14qngAAuQdkgS64m?usp=drive_link
