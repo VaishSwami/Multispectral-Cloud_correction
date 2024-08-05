@@ -6,3 +6,5 @@ Cite data, methods, and code as: Swaminathan, Vaishali, et al. "Radiometric Cali
 Read comments in main.py to edit file path and modify input parameters
 
 You may request for sample data and examples using the link: https://drive.google.com/drive/folders/1wk_DCkDjKK9nbuSB14qngAAuQdkgS64m?usp=drive_link
+
+Note: Follow Micasense tutorial and Github repository for package installation guidelines (https://micasense.github.io/imageprocessing/index.html)
