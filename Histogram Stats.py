@@ -22,7 +22,7 @@ def get_density(x, cov_factor=0.1):
         return density
 # from scipy.stats import bhattacharyya
 # Load the first Excel file into a pandas DataFrame and extract the values from the desired column
-file_path=r'G:\My Drive\Prelims and Dissertation\Papers\Radiometric Calibration\Additional Analysis\Histogram\Histograms2.xlsx'
+file_path=r'Example Dataset\Histogram analysis\Histogramss.xlsx'
 
 file_name = pd.ExcelFile(file_path)
 sheets= file_name.sheet_names
