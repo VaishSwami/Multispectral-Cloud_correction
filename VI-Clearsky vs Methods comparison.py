@@ -33,7 +33,7 @@ from math import sqrt
 import seaborn as sns
 
 
-input_file = r'G:\My Drive\Prelims and Dissertation\Papers\Radiometric Calibration\Additional Analysis\VI\Shadow Zones\OutputIndex\Copy of Vegetation Index-reorg-Resaved-check and merge.xlsx'
+input_file = r'Example Dataset\All vegetation dataset\All vegetation indices.xlsx'
 cols=['CRP+DLS*',	'Method 1*','Method 2*']
 # cols=['75 m - FE CRP+DLS*',	'75 m - FE Method 1*','75 m - FE Method 2*','75 m - AE CRP+DLS*','75 m - AE Method 1*','75 m - AE Method 2*']
 fig = plt.figure()
