@@ -37,14 +37,14 @@ CRP = 0
 if CRP == 0: ##Recommended
     panel_corr= [1.0,1.0,1.0,1.0,1.0]  
 elif CRP == 1:
-    panle_folder_path=r'...\Example Dataset\CRP'
+    panle_folder_path=r'...\Example Dataset\CRP\02June2022'
     panel_img_name='IMG_0006'
     bounding_box=20
     panel_corr= compute_irrad_correction(panle_folder_path, panel_img_name, bounding_box)
 
 ### Step 2 - DLS correction of variable irradiance images - Method 1
-input_path=r'.\Example Dataset\Micasense Images'  ## Insert the main folder that contains all the Micasense image folders (000, 001, 002, etc.)
-corrected_path= r'.\Example Dataset\DLS Corrected-Method 1'  ## Insert output folder path where all the processed images will be stored
+input_path=r'.\Example Dataset\Micasense Images\02June2022\30m-FE'  ## Insert the main folder that contains all the Micasense image folders (000, 001, 002, etc.)
+corrected_path= r'.\Example Dataset\DLS Corrected-Method 10\2June2022\30m-FE'  ## Insert output folder path where all the processed images will be stored
 
 if not os.path.exists(corrected_path):
     os.makedirs(corrected_path)
@@ -56,8 +56,8 @@ for or_files in glob.glob(corrected_path+'\*_original'):
 
 ## Create a separate folder to store images of the in-field calibration targets. This code requires that each target has a dedicated folder for itself. 
 ## Example: all images of target 1 are saved in a folder named 'Target 1', and so on. 
-target_folders_path=r'.\Example Dataset\Targets'
-metadata_path=r'.\Example Dataset\Metadata'
+target_folders_path=r'.\Example Dataset\Targets\02June2022\30m-FE'
+metadata_path=r'.\Example Dataset\Metadata\02June2022\30m-FE'
 ##Extract all metadata from the target images 
 data_type='T'
 bounding_box=20 ##Change this as needed
@@ -82,7 +82,7 @@ irradiance_proximity_matching(metadata_path)
 irrad_prox_list=combine_irrad_proximity_list(metadata_path)
 
 ##Perform irradiance proximity based image calibration 
-calibrated_path= r'.\Example Dataset\DLS Calibrated-Method 2'
+calibrated_path= r'.\Example Dataset\DLS Calibrated-Method 2\02June2022\30m-FE'
 if not os.path.exists(calibrated_path):
     os.makedirs(calibrated_path)
 Parallel(n_jobs=8, prefer= 'threads')(delayed(DLS_proximity_calibration)(SI, calibrated_path, irrad_prox_list) for SI in glob.glob(calibrated_path[0:-1]+'*.tif'))
